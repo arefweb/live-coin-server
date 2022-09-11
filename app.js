@@ -29,6 +29,10 @@ io.on("connection", (socket) => {
     }
   });
 
+  socket.on("wake up", (msg) => {
+    io.emit("i'm awake", msg);
+  });
+
   socket.on("disconnect", function (msg) {
     console.log(msg);
     x = 0;
