@@ -10,6 +10,9 @@ const io = new Server(httpServer, {
 });
 const tableData = require("./coinsData");
 
+app.get("/", (req, res) => {
+  res.send("Backend for Live-Coin Project. Auther: Aref Movahedzadeh");
+});
 
 io.on("connection", (socket) => {
   let counter = 0;
